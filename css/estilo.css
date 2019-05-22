@@ -1,0 +1,116 @@
+.centralizar {
+        align-items: center;
+        text-align: center;
+}
+
+.topo {
+        height: 50px;
+        background-color: cornflowerblue;
+        padding: 5px;
+}
+
+.voltar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 100%;
+        font-size: 18pt;
+        color: black;
+}
+
+.voltar:hover {
+        background-color: white;
+}
+
+.centralizar {
+        align-items: center;
+        text-align: center;
+}
+
+.topo {
+        height: 50px;
+        background-color: cornflowerblue;
+        padding: 5px;
+}
+
+.menu {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 100%;
+        font-size: 18pt;
+        color: black;
+}
+
+.menu:hover {
+        background-color: white;
+}
+
+.btn-opcoes {
+        border-radius: 25px;
+        width: 66%;
+}
+
+.cls-maior {
+        min-height: 50px;
+}
+
+.centralizar {
+        align-items: center;
+        text-align: center;
+}
+
+.topo {
+        height: 50px;
+        background-color: cornflowerblue;
+        padding: 5px;
+}
+
+.menu {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 100%;
+        font-size: 18pt;
+        color: black;
+}
+
+.menu:hover {
+        background-color: white;
+}
+
+.btn-opcoes {
+        border-radius: 25px;
+        width: 66%;
+}
+
+.icone-redondo {
+        color: white;
+        border-radius: 100%;
+        font-size: 18pt;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: cornflowerblue;
+}
+
+.span-link {
+        padding: 5px;
+        font-size: 16pt;
+}
+
+.link-add:hover {
+        background-color: cornflowerblue;
+        color: white;
+}
+
+.entre-btn {
+        display: block;
+        clear: both;
+        content: "";
+        width: 50px;
+}
