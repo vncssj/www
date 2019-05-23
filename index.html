@@ -16,19 +16,26 @@
 <body>
 	<div class="topo">
 	</div>
-	<div style="height: 200px;">&nbsp</div>
+	<div class="clearfix">&nbsp</div>
+
+	<img src="imagens/logo histomed.png" style="max-width: 80vw; margin: 10vw;">
+
 	<div class="container" style="height: 50%">
 		<legend>Entrar</legend>
 		<div class="col-xs-12 centralizar">
-			<input type="text" class="form-control" placeholder="Login">
+			<input type="text" class="form-control" id="login-login" placeholder="Login">
 		</div>
 		<div class="clearfix">&nbsp</div>
 		<div class="col-xs-12 centralizar">
-			<input type="password" class="form-control" placeholder="Senha">
+			<input type="password" class="form-control" id="login-senha" placeholder="Senha">
 		</div>
 		<div class="clearfix">&nbsp</div>
+		<div class="text-danger centralizar" id="erros">
+			<span id="input-erros"></span>
+			<div class="clearfix">&nbsp</div>
+		</div>
 		<div class="col-xs-12 centralizar">
-			<a href="central.html" class="btn btn-primary">Entrar</a>
+			<a href="central.html" class="btn btn-primary" id="login">Entrar</a>
 		</div>
 		<div class="col-xs-12 centralizar" style="margin-top: 5%;">
 			<span>Não tem cadastro? <a href="cadastro.html">Clique aqui!</a></span>
@@ -37,3 +44,17 @@
 </body>
 
 </html>
+<script>
+	$("#login").click(function (e) {
+		e.preventDefault();
+		let login = $("#login-login").val();
+		let senha = $("#login-senha").val();
+		if (login == "" || senha == "") {
+			$("#erros").show();
+			$("#input-erros").empty();
+			$("#input-erros").append("Os campos de login não podem estar vazios!</br> Por favor, preencha os campos com suas credenciais.");
+		} else {
+			window.location.href = "central.html";
+		}
+	})
+</script>

@@ -15,24 +15,48 @@
 
 <body>
         <div class="topo">
-                <a href="#" class="menu"><i class="fas fa-bars"></i> </a>
+                <a class="btn-menu" id="btn-menu" show="false"><i class="fas fa-bars"></i> </a>
+        </div>
+        <div class="nav-vertical" id="menu">
+                <div id="dados">
+                        <div id="foto"><i class="fa fa-user"
+                                        style="padding: 15px; font-size: 18pt; background-color: white; border-radius: 50%;"></i>
+                        </div>
+                        <div id="nome">Usuário</div>
+                </div>
+                <a href="editar-perfil.html">
+                        <div class="link-menu"><i class="icones-menu fas fa-user-cog" style="padding-right: 6px;"></i>
+                                Editar Perfil</div>
+                </a>
+                <a href="logout.html">
+                        <div class="link-menu"><i class="icones-menu fas fa-sign-out-alt"></i> Sair
+                        </div>
+                </a>
         </div>
         <div class="container col-xs-12">
                 <div class="clearfix cls-maior">&nbsp</div>
                 <h2 class="centralizar">Bem Vindo, Usuário</h2>
                 <div class="clearfix cls-maior">&nbsp</div>
                 <div class="col-xs-12 centralizar">
-                        <a href="remedios.html" class="btn btn-lg btn-info btn-opcoes">Remédios</a>
+                        <a href="remedios.html" class="btn btn-lg btn-info btn-opcoes"><i class="fas fa-capsules"></i>
+                                Remédios</a>
                 </div>
                 <div class="clearfix cls-maior">&nbsp</div>
                 <div class=" col-xs-12 centralizar">
-                        <a href="alergias.html" class="btn btn-lg btn-info btn-opcoes">Alergías</a>
+                        <a href="alergias.html" class="btn btn-lg btn-info btn-opcoes"><i class="fas fa-allergies"></i>
+                                Alergías</a>
                 </div>
                 <div class="clearfix cls-maior">&nbsp</div>
                 <div class=" col-xs-12 centralizar">
-                        <a href="consultas.html" class="btn btn-lg btn-info btn-opcoes">Consultas</a>
+                        <a href="consultas.html" class="btn btn-lg btn-info btn-opcoes"><i
+                                        class="fas fa-clinic-medical"></i> Consultas</a>
                 </div>
         </div>
 </body>
 
 </html>
+<script>
+        $("#btn-menu").click(function () {
+                $("#menu").toggle();
+        });
+</script>

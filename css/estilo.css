@@ -68,7 +68,7 @@
         padding: 5px;
 }
 
-.menu {
+.btn-menu {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 10px;
@@ -78,8 +78,13 @@
         color: black;
 }
 
-.menu:hover {
+.btn-menu:hover {
+        color: black;
+}
+
+.btn-menu:active {
         background-color: white;
+        color: black;
 }
 
 .btn-opcoes {
@@ -113,4 +118,70 @@
         clear: both;
         content: "";
         width: 50px;
+}
+
+.nav-vertical {
+        display: none;
+        height: calc(100vh - 50px);
+        background-color: cornflowerblue;
+        width: 80%;
+        z-index: 10;
+        position: absolute;
+        box-shadow: 5px 10px 10px -5px;
+}
+
+.showMenu {
+        display: block;
+        animation-name: slide-h;
+        animation-duration: 1s;
+}
+
+@keyframes slide-h {
+        0% {
+                width: 0vw;
+        }
+        100% {
+                width: 80vw;
+        }
+}
+
+#foto {
+        width: 20%;
+}
+
+#nome {
+        width: 80%;
+        text-align: right;
+        padding: 5px;
+}
+
+#dados {
+        display: flex;
+        padding: 5px;
+}
+
+.link-menu {
+        background-color: transparent;
+        font-size: 14pt;
+        padding: 10px;
+        color: black;
+}
+
+.link-menu:hover {
+        background-color: #87baf2;
+}
+
+a:hover {
+        text-decoration: none;
+}
+
+.icones-menu {
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 12pt;
+}
+
+#erros {
+        display: none;
 }

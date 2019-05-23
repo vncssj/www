@@ -32,7 +32,7 @@
                 <div class="clearfix">&nbsp</div>
                 <div class="form-inline centralizar">
                         <div style="width: 25%"></div>
-                        <a href="alergias.html" class="btn btn-success">Salvar</a>
+                        <a href="alergias.html" class="btn btn-success" id="alergia-salvar">Salvar</a>
                         <div style="width: 5%"></div>
                         <a href="alergias.html" class="btn btn-secondary">Cancelar</a>
                         <div style="width: 25%"></div>
@@ -41,3 +41,10 @@
 </body>
 
 </html>
+<script>
+        $("#alergia-salvar").click(function (e) {
+                e.preventDefault();
+                alert('Exito em Adicionar Alergía');
+                window.location.href = "alergias.html";
+        });
+</script>

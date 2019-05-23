@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="fontawesome/css/all.css">
+        <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+        <div class="topo">
+                <a href="central.html" class="voltar"><i class="fas fa-arrow-left"></i> </a>
+        </div>
+        <div style="height: 100px;">&nbsp</div>
+        <div class="container" style="height: 50%">
+                <legend class="centralizar">Atualizar Dados</legend>
+                <div class="col-xs-12 centralizar">
+                        <input type="text" class="form-control centralizar" id="editar-nome" placeholder="Nome">
+                </div>
+                <div class="clearfix">&nbsp</div>
+                <div class="col-xs-12 centralizar">
+                        <input type="email" class="form-control centralizar" id="editar-email" placeholder="Email">
+                </div>
+                <div class="clearfix">&nbsp</div>
+                <div class="col-xs-12 centralizar">
+                        <input type="password" class="form-control centralizar" id="editar-senha" placeholder="Senha">
+                </div>
+                <div class="clearfix">&nbsp</div>
+                <div class="col-xs-12 centralizar">
+                        <input type="password" class="form-control centralizar" id="editar-conf-senha"
+                                placeholder="Confirmar Senha">
+                </div>
+                <div class="clearfix">&nbsp</div>
+                <div class="col-xs-12 centralizar">
+                        <a href="index.html" class="btn btn-success" id="editar-salvar">Salvar</a>
+                </div>
+        </div>
+</body>
+
+</html>
+<script>
+        $.ajax({
+                type: "GET",
+                url: "users.json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                        let dados = data;
+
+                        //inserindo dados do usuário nos inputs
+                        $("#editar-nome").val(dados[0].nome);
+                        $("#editar-email").val(dados[0].email);
+                }
+        });
+        $("#editar-salvar").click(function (evt) {
+                evt.preventDefault();
+                alert("Dados atualizados com sucesso!");
+                window.location.href = "central.html";
+        });
+</script>

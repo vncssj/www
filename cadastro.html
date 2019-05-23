@@ -21,25 +21,52 @@
         <div class="container" style="height: 50%">
                 <legend class="centralizar">Cadastro</legend>
                 <div class="col-xs-12 centralizar">
-                        <input type="text" class="form-control centralizar" placeholder="Nome">
+                        <input type="text" class="form-control centralizar" id="cadastro-nome" placeholder="Nome">
                 </div>
                 <div class="clearfix">&nbsp</div>
                 <div class="col-xs-12 centralizar">
-                        <input type="email" class="form-control centralizar" placeholder="Email">
+                        <input type="email" class="form-control centralizar" id="cadastro-email" placeholder="Email">
                 </div>
                 <div class="clearfix">&nbsp</div>
                 <div class="col-xs-12 centralizar">
-                        <input type="password" class="form-control centralizar" placeholder="Senha">
+                        <input type="password" class="form-control centralizar" id="cadastro-senha" placeholder="Senha">
                 </div>
                 <div class="clearfix">&nbsp</div>
                 <div class="col-xs-12 centralizar">
-                        <input type="password" class="form-control centralizar" placeholder="Confirmar Senha">
+                        <input type="password" class="form-control centralizar" id="cadastro-conf-senha"
+                                placeholder="Confirmar Senha">
                 </div>
                 <div class="clearfix">&nbsp</div>
+                <div class="text-danger centralizar" id="erros">
+                        <span id="input-erros"></span>
+                        <div class="clearfix">&nbsp</div>
+                </div>
                 <div class="col-xs-12 centralizar">
-                        <a href="index.html" class="btn btn-primary">Concluir</a>
+                        <a href="index.html" class="btn btn-primary" id="cadastro-concluir">Concluir</a>
                 </div>
         </div>
 </body>
 
 </html>
+<script>
+        $("#cadastro-concluir").click(function (evt) {
+                evt.preventDefault();
+                let senha = $("#cadastro-senha");
+                let conf_senha = $("#cadastro-conf-senha");
+                if (senha == conf_senha) {
+                        localStorage.setItem("email", $(""))
+                        alert("Cadastro concluido com sucesso!");
+                        window.location.href = "index.html";
+                } else if (senha == null || conf_senha == null) {
+                        $("#erros").show();
+                        $("#input-erros").empty();
+                        $("#input-erros").append("Os campos de login não podem estar vazios!</br> Por favor, preencha os campos com suas credenciais.");
+
+                } else {
+                        $("#erros").show();
+                        $("#input-erros").empty();
+                        $("#input-erros").append("Senhas Incompatíveis!</br> Os campos de senha e confirmação devem ser iguais.");
+
+                }
+        });
+</script>
