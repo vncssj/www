@@ -48,14 +48,33 @@
 </body>
 
 </html>
+<!-- Modal -->
+<div class="modal fade" id="modalConfirmacao" tabindex="-1" role="dialog" aria-labelledby="modalConfirmacaoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header" style="border-bottom: 0px; padding: 5px;">
+                        </div>
+                        <div class="modal-body centralizar" id="textoConfirmacao">
+                        </div>
+                        <div class="centralizar">
+                                <button class="btn btn-primary" id="ok">Ok!</button>
+                        </div>
+                        <div class="modal-body centralizar" id="textoConfirmacao">
+                        </div>
+                </div>
+        </div>
+</div>
+
 <script>
         $("#cadastro-concluir").click(function (evt) {
                 evt.preventDefault();
                 let senha = $("#cadastro-senha").val();
                 let conf_senha = $("#cadastro-conf-senha").val();
                 if (senha == conf_senha && senha != "") {
-                        localStorage.setItem("email", $(""))
-                        window.location.href = "index.html";
+                        $("#modalConfirmacao").modal("show")
+                        $("#textoConfirmacao").append("Usuário Cadastrado com Sucesso!");
+                        // window.location.href = "index.html";
                 } else if (senha == "" || conf_senha == "") {
                         $("#erros").show();
                         $("#input-erros").empty();
@@ -67,5 +86,8 @@
                         $("#input-erros").append("Senhas Incompatíveis!</br> Os campos de senha e confirmação devem ser iguais.");
 
                 }
+        });
+        $("#ok").click(function () {
+                window.location.href = "index.html";
         });
 </script>

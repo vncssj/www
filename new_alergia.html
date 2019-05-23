@@ -41,10 +41,30 @@
 </body>
 
 </html>
+<!-- Modal -->
+<div class="modal fade" id="modalConfirmacao" tabindex="-1" role="dialog" aria-labelledby="modalConfirmacaoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header" style="border-bottom: 0px; padding: 5px;">
+                        </div>
+                        <div class="modal-body centralizar" id="textoConfirmacao">
+                        </div>
+                        <div class="centralizar">
+                                <button class="btn btn-primary" id="ok">Ok!</button>
+                        </div>
+                        <div class="modal-body centralizar" id="textoConfirmacao">
+                        </div>
+                </div>
+        </div>
+</div>
 <script>
         $("#alergia-salvar").click(function (e) {
                 e.preventDefault();
-                alert('Exito em Adicionar Alergía');
+                $("#modalConfirmacao").modal("show")
+                $("#textoConfirmacao").append("Sucesso!</br> Alergia salva.");
+        });
+        $("#ok").click(function () {
                 window.location.href = "alergias.html";
         });
 </script>

@@ -153,6 +153,8 @@
         width: 80%;
         text-align: right;
         padding: 5px;
+        padding-right: 20px;
+        font-size: 14pt;
 }
 
 #dados {

@@ -53,6 +53,15 @@
 			$("#erros").show();
 			$("#input-erros").empty();
 			$("#input-erros").append("Os campos de login não podem estar vazios!</br> Por favor, preencha os campos com suas credenciais.");
+		} else if (login == "admin") {
+			if (senha == "admin") {
+				window.location.href = "central.html";
+			} else {
+				$("#erros").show();
+				$("#input-erros").empty();
+				$("#input-erros").append("Login ou Senha inválidos, Por favor tente novamente!.");
+			}
+
 		} else {
 			window.location.href = "central.html";
 		}
