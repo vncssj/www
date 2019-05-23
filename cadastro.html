@@ -51,13 +51,12 @@
 <script>
         $("#cadastro-concluir").click(function (evt) {
                 evt.preventDefault();
-                let senha = $("#cadastro-senha");
-                let conf_senha = $("#cadastro-conf-senha");
-                if (senha == conf_senha) {
+                let senha = $("#cadastro-senha").val();
+                let conf_senha = $("#cadastro-conf-senha").val();
+                if (senha == conf_senha && senha != "") {
                         localStorage.setItem("email", $(""))
-                        alert("Cadastro concluido com sucesso!");
                         window.location.href = "index.html";
-                } else if (senha == null || conf_senha == null) {
+                } else if (senha == "" || conf_senha == "") {
                         $("#erros").show();
                         $("#input-erros").empty();
                         $("#input-erros").append("Os campos de login não podem estar vazios!</br> Por favor, preencha os campos com suas credenciais.");
